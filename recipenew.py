@@ -42,7 +42,10 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain.text_splitter import CharacterTextSplitter
 
 
-openai.api_key = 'sk-77xclCNx4kWi1H3-BCiruP-R5fGp7sLeqdKTrlSsOgT3BlbkFJQqU3brLhrrG2887xtC66gjvhM4F4KJfVMtNS4Td1AA'
+#openai.api_key = 'sk-77xclCNx4kWi1H3-BCiruP-R5fGp7sLeqdKTrlSsOgT3BlbkFJQqU3brLhrrG2887xtC66gjvhM4F4KJfVMtNS4Td1AA'
+
+api_key = st.secrets["OPENAI_API_KEY"]
+
 
 def get_user_input(prompt):
     user_input = st.text_input(prompt)
@@ -97,7 +100,7 @@ def process_pdf_and_search(protein_preference, calorie_preference, ingredient_pr
 
     # Set up OpenAI embeddings and document search
 
-    embeddings = OpenAIEmbeddings(openai_api_key="sk-77xclCNx4kWi1H3-BCiruP-R5fGp7sLeqdKTrlSsOgT3BlbkFJQqU3brLhrrG2887xtC66gjvhM4F4KJfVMtNS4Td1AA")
+    embeddings = OpenAIEmbeddings(openai_api_key=api_key)
     docsearch = FAISS.from_texts(texts, embeddings)
 
     # Query the document search
