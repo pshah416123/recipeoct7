@@ -78,7 +78,7 @@ def process_pdf_and_search(protein_preference, calorie_preference, ingredient_pr
     query = f"Give me a meal and recipe with about {protein_preference} grams of protein and about {calorie_preference} calories using {ingredient_preference} and any other ingredients from Pooja's recipes. If you don't know say NA"
 
     # Read the PDF
-    pdf_path = 'C:/Users/pooja.f.shah/Documents/PoojaRecipes.pdf'
+    pdf_path = './PoojaRecipes.pdf'
     doc_reader = PdfReader(pdf_path)
     raw_text = ''
     for i, page in enumerate(doc_reader.pages):
