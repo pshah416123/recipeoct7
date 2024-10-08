@@ -78,7 +78,7 @@ def process_pdf_and_search(protein_preference, calorie_preference, ingredient_pr
     #calorie_preference = get_user_input("About how many calories do you want your meal to contain? If you don't have a preference enter 'NA' ")
     #ingredient_preference = get_user_input("Do you have any specific ingredients you want to use? If you don't have a preference enter 'NA' ")
 
-    query = f"Give me a meal and recipe with about {protein_preference} grams of protein and about {calorie_preference} calories using {ingredient_preference} and any other ingredients from Pooja's recipes. If you don't know say NA"
+    query = f"Give me a meal and recipe with about {protein_preference} grams of protein and about {calorie_preference} calories using {ingredient_preference} and any other ingredients from Pooja's recipes. If you don't know, suggest the closest thing"
 
     # Read the PDF
     pdf_path = './PoojaRecipes.pdf'
