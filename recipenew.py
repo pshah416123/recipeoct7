@@ -44,7 +44,7 @@ from langchain.text_splitter import CharacterTextSplitter
 
 #openai.api_key = 'sk-77xclCNx4kWi1H3-BCiruP-R5fGp7sLeqdKTrlSsOgT3BlbkFJQqU3brLhrrG2887xtC66gjvhM4F4KJfVMtNS4Td1AA'
 
-api_key = st.secrets["OPENAI_API_KEY"]
+api_key = st.secrets["general"]["OPENAI_API_KEY"]
 
 
 def get_user_input(prompt):
